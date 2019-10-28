@@ -18,8 +18,24 @@ and does the following:
    the format that your program expects arguments to be given.
    Then exit the program.
 """
-print("hello")
 
 import sys
 import calendar
 from datetime import datetime
+
+if(len(sys.argv)==1):
+  currentMonth = datetime.now().month
+  currentYear = datetime.now().year
+  print(currentYear, currentMonth)
+  
+
+elif(len(sys.argv)==2):
+  currentMonth = int(sys.argv[1])
+  currentYear = datetime.now().year
+
+elif(len(sys.argv)==3):
+  currentMonth = int(sys.argv[1])
+  currentYear = int(sys.argv[2])
+  print(currentYear, currentMonth)
+
+print(calendar.month(currentYear, currentMonth))
