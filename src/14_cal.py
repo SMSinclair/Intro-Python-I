@@ -18,6 +18,7 @@ and does the following:
    the format that your program expects arguments to be given.
    Then exit the program.
 """
+print("hello")
 
 import sys
 import calendar
